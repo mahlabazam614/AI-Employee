@@ -5,7 +5,7 @@ import path from 'path';
 import { revalidatePath } from 'next/cache';
 
 export async function approveTask(filename: string) {
-    const vaultPath = path.resolve('../AI_Employee_Vault');
+    const vaultPath = path.resolve('./AI_Employee_Vault');
     const pendingPath = path.join(vaultPath, 'Pending_Approval', filename);
     const approvedPath = path.join(vaultPath, 'Approved', filename);
 

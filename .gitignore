@@ -36,6 +36,3 @@ AI_Employee_Vault/Inbox/*
 
 # Project specific
 output.log
-frontend/output.log
-frontend/.next/
-frontend/node_modules/

@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 export default async function FinancePage() {
-    const vaultPath = path.resolve('../AI_Employee_Vault');
+    const vaultPath = path.resolve('./AI_Employee_Vault');
     const briefingsPath = path.join(vaultPath, 'Briefings');
 
     const getBriefings = () => {

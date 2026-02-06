@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 export default async function TasksPage() {
-    const vaultPath = path.resolve('../AI_Employee_Vault');
+    const vaultPath = path.resolve('./AI_Employee_Vault');
     const needsActionPath = path.join(vaultPath, 'Needs_Action');
     const donePath = path.join(vaultPath, 'Done');
 
