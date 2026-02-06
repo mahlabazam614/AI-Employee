@@ -4,7 +4,7 @@ import path from 'node:path';
 import DashboardClient from './DashboardClient';
 
 export default async function Page() {
-    const vaultPath = path.resolve('./AI_Employee_Vault');
+    const vaultPath = path.join(process.cwd(), 'AI_Employee_Vault');
     const needsActionPath = path.join(vaultPath, 'Needs_Action');
     const pendingApprovalPath = path.join(vaultPath, 'Pending_Approval');
 
