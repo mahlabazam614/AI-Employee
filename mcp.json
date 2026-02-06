@@ -1,0 +1,29 @@
+{
+    "mcpServers": {
+        "filesystem": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-filesystem",
+                "c:/Users/mahla/Desktop/hackathon 3/AI_Employee_Vault"
+            ]
+        },
+        "fetch": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-fetch"
+            ]
+        },
+        "google-maps": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-google-maps"
+            ],
+            "env": {
+                "GOOGLE_MAPS_API_KEY": "YOUR_API_KEY_HERE"
+            }
+        }
+    }
+}
