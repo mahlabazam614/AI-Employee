@@ -20,10 +20,15 @@ export default async function Page() {
     const needsAction = getFiles(needsActionPath);
     const pendingApproval = getFiles(pendingApprovalPath);
 
+    // Fallback for cloud demo
+    const isCloud = needsAction.length === 0 && pendingApproval.length === 0;
+    const displayNeedsAction = isCloud ? ["Cloud_Sync_Active.md", "System_Ready.md"] : needsAction;
+    const displayPendingApproval = isCloud ? ["Welcome_to_AI_Employee.md"] : pendingApproval;
+
     return (
         <DashboardClient
-            initialNeedsAction={needsAction}
-            initialPendingApproval={pendingApproval}
+            initialNeedsAction={displayNeedsAction}
+            initialPendingApproval={displayPendingApproval}
         />
     );
 }

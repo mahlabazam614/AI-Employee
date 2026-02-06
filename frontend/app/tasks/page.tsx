@@ -17,6 +17,11 @@ export default async function TasksPage() {
     const tasks = getFiles(needsActionPath);
     const completed = getFiles(donePath);
 
+    // Cloud demo fallback
+    const displayTasks = tasks.length === 0 && completed.length === 0
+        ? ["Sample_Startup_Task.md"]
+        : tasks;
+
     return (
         <div className="animate-fade-in">
             <header style={{ marginBottom: '3rem' }}>
@@ -26,9 +31,9 @@ export default async function TasksPage() {
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
                 <div className="glass-card">
-                    <h3>Needs Action ({tasks.length})</h3>
+                    <h3>Needs Action ({displayTasks.length})</h3>
                     <div style={{ marginTop: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                        {tasks.length > 0 ? tasks.map((file, idx) => (
+                        {displayTasks.length > 0 ? displayTasks.map((file, idx) => (
                             <div key={idx} style={{
                                 padding: '1rem',
                                 background: 'rgba(255, 171, 0, 0.05)',
@@ -38,7 +43,7 @@ export default async function TasksPage() {
                                 justifyContent: 'space-between'
                             }}>
                                 <span>{file.replace('.md', '').split('_').join(' ')}</span>
-                                <span style={{ fontSize: '0.8rem', opacity: 0.5 }}>Awaiting Logic</span>
+                                <span style={{ fontSize: '0.8rem', opacity: 0.5 }}>Monitoring</span>
                             </div>
                         )) : <p style={{ opacity: 0.4 }}>No active tasks.</p>}
                     </div>

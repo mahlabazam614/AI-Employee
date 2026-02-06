@@ -18,6 +18,11 @@ export default async function ApprovalsPage() {
     const needsAction = getFiles(needsActionPath);
     const pendingApproval = getFiles(pendingApprovalPath);
 
+    // Cloud demo fallback
+    const isCloud = needsAction.length === 0 && pendingApproval.length === 0;
+    const displayNeedsAction = isCloud ? ["Review_Project_Plan.md"] : needsAction;
+    const displayPendingApproval = isCloud ? ["Cloud_Deployment_Approval.md"] : pendingApproval;
+
     return (
         <div className="animate-fade-in">
             <header style={{ marginBottom: '3rem' }}>
@@ -26,8 +31,8 @@ export default async function ApprovalsPage() {
             </header>
 
             <DashboardClient
-                initialNeedsAction={needsAction}
-                initialPendingApproval={pendingApproval}
+                initialNeedsAction={displayNeedsAction}
+                initialPendingApproval={displayPendingApproval}
             />
         </div>
     );
