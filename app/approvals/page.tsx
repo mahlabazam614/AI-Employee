@@ -1,6 +1,6 @@
 import React from 'react';
-import fs from 'fs';
-import path from 'path';
+import fs from 'node:fs';
+import path from 'node:path';
 import DashboardClient from '../DashboardClient';
 
 export default async function ApprovalsPage() {
