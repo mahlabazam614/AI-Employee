@@ -21,7 +21,7 @@ This project is a comprehensive technical implementation of a "Digital FTE" (Ful
 ### 1. Prerequisites
 - Python 3.13+
 - Node.js 24+
-- Next.js (installed in `/frontend`)
+- Next.js
 
 ### 2. Setup
 ```bash
@@ -29,7 +29,6 @@ This project is a comprehensive technical implementation of a "Digital FTE" (Ful
 pip install schedule watchdog
 
 # Install Frontend dependencies
-cd frontend
 npm install
 ```
 
@@ -46,7 +45,6 @@ python scheduler.py
 $env:PYTHONPATH="watchers"; python watchers/filesystem_watcher.py
 
 # Start the Dashboard
-cd frontend
 npm run dev
 ```
 
