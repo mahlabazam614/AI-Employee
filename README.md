@@ -4,6 +4,7 @@
 
 This project is a comprehensive technical implementation of a "Digital FTE" (Full-Time Equivalent). It uses Claude Code as the reasoning engine and Obsidian as the primary GUI and long-term memory.
 
+
 ## 🌟 Tiers Achieved
 - **[x] Bronze**: Foundation (Vault, Dashboard, Filesystem Watcher)
 - **[x] Silver**: Functional Assistant (LinkedIn Watcher, MCP Integration, Scheduling)
